@@ -13,16 +13,14 @@
         android:theme="@style/Theme.AppCompat.Light"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name="com.tobtek.shop.SplashActivity">
+            android:name="com.tobtek.shop.MainActivity"
+            android:label="2BTeK">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name="com.tobtek.shop.MainActivity"
-            android:label="2BTeK">
         </activity>
     </application>
 

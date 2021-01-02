@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 
 public class MainActivity extends Activity {
 
@@ -17,13 +19,14 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mWebView = findViewById(R.id.activity_main_webview);
+
         WebSettings webSettings = mWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        mWebView.setWebViewClient(new MyWebViewClient());
+        mWebView.setWebViewClient(new MyWebViewClient(this, (FrameLayout) findViewById(R.id.loader)));
 
         // REMOTE RESOURCE
         mWebView.loadUrl("https://exoti.cyou/");
-        mWebView.setWebViewClient(new WebViewClient());
+//        mWebView.setWebViewClient(new WebViewClient());
 
         // LOCAL RESOURCE
         // mWebView.loadUrl("file:///android_asset/index.html");
